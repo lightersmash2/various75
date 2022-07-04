@@ -1,0 +1,24 @@
+{
+  "name": "a",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jimp": "^0.16.0",
+    "is-an-image-url": "^1.0.4",
+    "url-valid": "^0.3.0",
+    "url-to-screenshot": "^3.0.0",
+    "pastebin-js": "^1.0.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ]
+}
