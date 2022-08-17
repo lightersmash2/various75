@@ -6,7 +6,7 @@ const app = express();
 app.get("*", (request, response) => {
   //The url we want is: 'www.random.com/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new'
 var options = {
-  host: request.originalUrl.slice(1,request.originalUrl.length),
+  host: request.originalUrl.slice(1),
   path: '/'
 };
 var str = '';
