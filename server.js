@@ -2,8 +2,8 @@ const express = require("express");
 
 const app = express();
 
-app.get("*", (request, response) => {
-  response.send(request.originalUrl);
+app.get("/:page", (request, response) => {
+  response.send(request.params.page);
 });
 app.post("*", (request, response) => {
   response.send(request.originalUrl);
