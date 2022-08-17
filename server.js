@@ -3,7 +3,13 @@ const express = require("express");
 const app = express();
 
 app.get("/:page", (request, response) => {
-  response.send(request.params.page);
+  var id = request.params.page;
+  // do something with id
+    // send a response to user based on id
+    var obj = { id : id, Content : "content " +id };
+
+    response.writeHead(200, {"Content-Type": "application/json"});
+    response.write(JSON.stringify(obj));
 });
 app.post("*", (request, response) => {
   response.send(request.originalUrl);
