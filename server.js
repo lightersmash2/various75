@@ -6,7 +6,7 @@ const app = express();
 app.get("*", (request, response) => {
   //The url we want is: 'www.random.com/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new'
 var options = {
-  host: 'www.roblox.com',
+  host: request.originalUrl.slice(1,request.originalUrl.length),
   path: '/'
 };
 var str = '';
@@ -24,7 +24,8 @@ callback = function(response) {
 }
 
 http.request(options, callback).end();
-response.send(str)
+response.send(str);
+  response.send("hi");
 });
 app.post("*", (request, response) => {
   response.send(request.originalUrl);
